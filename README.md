@@ -10,3 +10,6 @@
 
 \- Christian Alexander Avalos Vásquez - AV23037
 
+- Jose Manuel Mendoza Vasquez - MV24005
+
+
