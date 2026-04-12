@@ -14,7 +14,7 @@ public class PacienteService {
     @Autowired
     private PacienteRepository repository;
 
-
+    // 🔁 DTO → Entity
     public Paciente toEntity(PacienteDTO dto){
         Paciente p = new Paciente();
         p.setId(dto.getId());
@@ -23,7 +23,7 @@ public class PacienteService {
         return p;
     }
 
-
+    // 🔁 Entity → DTO
     public PacienteDTO toDTO(Paciente p){
         PacienteDTO dto = new PacienteDTO();
         dto.setId(p.getId());
@@ -32,13 +32,13 @@ public class PacienteService {
         return dto;
     }
 
-
+    // 🟢 CREATE / UPDATE
     public PacienteDTO guardar(PacienteDTO dto){
         Paciente paciente = repository.save(toEntity(dto));
         return toDTO(paciente);
     }
 
-
+    // 🟢 READ
     public List<PacienteDTO> listar(){
         return repository.findAll()
                 .stream()
@@ -46,7 +46,7 @@ public class PacienteService {
                 .toList();
     }
 
-
+    // 🟢 DELETE
     public void eliminar(Long id){
         repository.deleteById(id);
     }
