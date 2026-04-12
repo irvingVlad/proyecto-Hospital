@@ -1,4 +1,3 @@
---
 -- Sistema de Gestion Hospitalaria
 -- Script de creacion de base de datos
 -- Equipo DAW123 - UES
@@ -12,3 +11,4 @@ CREATE TABLE IF NOT EXISTS pacientes (
     email       VARCHAR(100) UNIQUE,
     created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
