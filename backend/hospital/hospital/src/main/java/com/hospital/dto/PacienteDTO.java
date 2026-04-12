@@ -5,6 +5,7 @@ public class PacienteDTO {
     private Long id;
     private String nombre;
     private String apellido;
+    private String contactoEmergencia;
 
     // Constructor vacío
     public PacienteDTO() {
@@ -34,5 +35,13 @@ public class PacienteDTO {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getContactoEmergencia() {
+        return contactoEmergencia;
+    }
+    
+    public void setContactoEmergencia(String contactoEmergencia) {
+        this.contactoEmergencia = contactoEmergencia;
     }
 }
